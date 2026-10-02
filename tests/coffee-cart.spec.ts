@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('menu tabs change color when active', async ({ page }) => {
+test('menu tabs change color to goldenrod when active', async ({ page }) => {
   await page.goto('https://coffee-cart.app/');
   await expect(page.getByRole('link', { name: 'Menu page' })).toHaveCSS('color', 'rgb(218, 165, 32)');
   await expect(page.getByRole('link', { name: 'Cart page' })).toHaveCSS('color', 'rgb(0, 0, 0)');
